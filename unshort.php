@@ -3,7 +3,8 @@
 declare(strict_types=1);
 
 if ($argc < 2) {
-    echo "Usage: php unshort.php <url>\n";
+    $executable = str_ends_with($argv[0], '.php') ? "php $argv[0]" : $argv[0];
+    echo "Usage: $executable <url>\n";
     exit(1);
 }
 
